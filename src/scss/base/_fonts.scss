@@ -3,7 +3,10 @@
   src: url("/assets/fonts/ethnocentric.ttf") format("opentype");
 }
 @font-face {
-  font-family: "Gilroy";
-  src: url("/assets/fonts/Gilroy-ExtraBold.otf") format("opentype");
+  font-family: "GilroyLight";
   src: url("/assets/fonts/Gilroy-Light-Body.otf") format("opentype");
+}
+@font-face {
+  font-family: "GilroyBold";
+  src: url("/assets/fonts/Gilroy-ExtraBold.otf") format("opentype");
 }
