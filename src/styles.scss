@@ -6,8 +6,11 @@
 @import "scss/base/variables";
 
 // BLOCKS
+@import "scss/blocks/containers";
 
 // ELEMENTS
 @import "scss/elements/header";
+@import "scss/elements/carousel";
 
 // MODIFIERS
+@import "scss/modifiers/utils";

@@ -1,0 +1,13 @@
+.container-home-text {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  text-align: center;
+  padding-top: 60px;
+  .principal-text {
+    font-size: 35px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    margin-bottom: 0px;
+  }
+}

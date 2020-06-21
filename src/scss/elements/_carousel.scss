@@ -1,0 +1,29 @@
+.carousel {
+  * {
+    max-height: 600px;
+  }
+  div.image-carousel {
+    width: 100%;
+    height: 600px;
+    background-position: center;
+    background-size: cover;
+  }
+  .owl-dots {
+    margin-top: -26px !important;
+    position: absolute;
+    width: 100%;
+    div {
+      span {
+        padding: 3px 10px !important;
+        background: $grey !important;
+        border-radius: 2px !important;
+        height: 1px !important;
+      }
+    }
+    div.active {
+      span {
+        background: $black !important;
+      }
+    }
+  }
+}
