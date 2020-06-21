@@ -1,0 +1,19 @@
+.header {
+  background-color: $transparent !important;
+  color: $black !important;
+  mat-toolbar-row {
+    justify-content: space-evenly;
+    span {
+      font-size: 15px !important;
+      font-weight: 100 !important;
+      cursor: pointer;
+    }
+    span.brand {
+      font-weight: bold !important;
+      font-size: 20px !important;
+      color: $red;
+      text-transform: uppercase;
+      font-family: "Ethnocentric", "Gilroy";
+    }
+  }
+}
