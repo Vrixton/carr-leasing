@@ -21,9 +21,6 @@ export class BrandsComponent implements OnInit {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 2,
-      },
-      600: {
         items: 3,
       },
     },

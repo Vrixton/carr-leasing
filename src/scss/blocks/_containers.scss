@@ -160,7 +160,12 @@
   }
   @media (max-width: 900px) {
     .brand-list {
-      display: none;
+      padding: 50px 10px 0px 10px;
+      .brand {
+        margin: 10px;
+        width: 80px;
+        height: 80px;
+      }
     }
   }
 }
