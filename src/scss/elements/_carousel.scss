@@ -76,3 +76,50 @@
     display: none;
   }
 }
+.testimonials-carousel {
+  * {
+    max-height: 400px;
+  }
+  div.owl-carousel {
+    margin-top: 80px;
+  }
+  .owl-dots.ng-star-inserted {
+    span {
+      height: 5px;
+      width: 15px;
+    }
+  }
+  .testimonial.ng-star-inserted {
+    max-width: 600px;
+  }
+  .testimonial {
+    margin: 0 auto;
+    .border-dashed {
+      margin: 0 auto;
+      border: 1px dashed $black;
+      width: 140px;
+      height: 140px;
+      border-radius: 100%;
+      display: flex;
+      justify-content: center;
+      .img-client {
+        width: 120px;
+        height: 120px;
+        background-position: center;
+        background-size: cover;
+        border-radius: 100%;
+        margin-top: 10px;
+      }
+    }
+    .name {
+      font-size: 20px;
+    }
+    .city {
+      font-size: 15px;
+      color: $dark-grey;
+    }
+    .text {
+      font-size: 15px;
+    }
+  }
+}

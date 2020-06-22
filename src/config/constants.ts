@@ -54,4 +54,34 @@ export class Constants {
     { imageUrl: '/assets/cars/luxury.png', name: 'Luxury' },
     { imageUrl: '/assets/cars/motorcycle.png', name: 'Motorcycle' },
   ];
+  public static TESTIMONIALS = [
+    {
+      imageUrl: '/assets/testimonials/1.jpeg',
+      name: 'George Marill',
+      city: 'Napls - Florida',
+      testimonial:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus et facilis repellendus, ex exercitationem quae explicabo architecto iusto. Repellendus aliquid repudiandae nostrum at consectetur nemo quas labore molestias architecto culpa?',
+    },
+    {
+      imageUrl: '/assets/testimonials/2.jpeg',
+      name: 'George Marill',
+      city: 'Napls - Florida',
+      testimonial:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus et facilis repellendus, ex exercitationem quae explicabo architecto iusto. Repellendus aliquid repudiandae nostrum at consectetur nemo quas labore molestias architecto culpa?',
+    },
+    {
+      imageUrl: '/assets/testimonials/3.jpeg',
+      name: 'George Marill',
+      city: 'Napls - Florida',
+      testimonial:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus et facilis repellendus, ex exercitationem quae explicabo architecto iusto. Repellendus aliquid repudiandae nostrum at consectetur nemo quas labore molestias architecto culpa?',
+    },
+    {
+      imageUrl: '/assets/testimonials/4.jpeg',
+      name: 'George Marill',
+      city: 'Napls - Florida',
+      testimonial:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus et facilis repellendus, ex exercitationem quae explicabo architecto iusto. Repellendus aliquid repudiandae nostrum at consectetur nemo quas labore molestias architecto culpa?',
+    },
+  ];
 }

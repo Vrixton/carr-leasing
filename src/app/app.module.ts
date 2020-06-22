@@ -13,9 +13,10 @@ import { HowWorksComponent } from './how-works/how-works.component';
 import { BrandsComponent } from './brands/brands.component';
 import { ModelComponent } from './model/model.component';
 import { CustomizeComponent } from './customize/customize.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, WantCarComponent, HowWorksComponent, BrandsComponent, ModelComponent, CustomizeComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, WantCarComponent, HowWorksComponent, BrandsComponent, ModelComponent, CustomizeComponent, TestimonialsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

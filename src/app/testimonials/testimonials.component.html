@@ -1,0 +1,17 @@
+<div class="container-testimonials">
+    <h1 class="extra-bold">Testimonials</h1>
+    <h5>What our clients says</h5>
+    <div class="yellow-subline"></div>
+    <owl-carousel-o [options]="customOptions" class="testimonials-carousel">
+        <ng-template carouselSlide *ngFor="let item of testimonials">
+            <div class="testimonial">
+                <div class="border-dashed">
+                    <div class="img-client" [ngStyle]="{'background-image': 'url(' + item.imageUrl + ')'}"></div>
+                </div>
+                <p class="name">{{ item.name }}</p>
+                <p class="city">{{ item.city }}</p>
+                <p class="text">{{ item.testimonial }}</p>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>
