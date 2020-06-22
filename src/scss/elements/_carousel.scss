@@ -52,3 +52,28 @@
     display: none;
   }
 }
+
+.model-carousel {
+  * {
+    max-height: 300px;
+  }
+  div.owl-carousel {
+    margin-top: 80px;
+  }
+  div.image-carousel {
+    img {
+      width: 90%;
+      margin-bottom: -40px;
+    }
+  }
+  div.owl-item,
+  .image-carousel.ng-star-inserted {
+    display: inline-block;
+    justify-content: center;
+  }
+}
+@media (min-width: 901px) {
+  .model-carousel {
+    display: none;
+  }
+}

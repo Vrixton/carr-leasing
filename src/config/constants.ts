@@ -39,4 +39,19 @@ export class Constants {
     { imageUrl: '/assets/brands/Grupo 169.svg' },
     { imageUrl: '/assets/brands/Grupo 170.svg' },
   ];
+  public static CARS = [
+    { imageUrl: '/assets/cars/van.png', name: 'Van' },
+    { imageUrl: '/assets/cars/truck.png', name: 'Truck' },
+    { imageUrl: '/assets/cars/sedan.png', name: 'Sedan' },
+    { imageUrl: '/assets/cars/exotic.png', name: 'Exotic' },
+    { imageUrl: '/assets/cars/hybrid.png', name: 'Hybrid' },
+    { imageUrl: '/assets/cars/crossover.png', name: 'Crossover' },
+    { imageUrl: '/assets/cars/convertible.png', name: 'Convertible' },
+    { imageUrl: '/assets/cars/wagon.png', name: 'Wagon' },
+    { imageUrl: '/assets/cars/SUV.png', name: 'Suv' },
+    { imageUrl: '/assets/cars/cuope.png', name: 'Cuope' },
+    { imageUrl: '/assets/cars/compact.png', name: 'Compact' },
+    { imageUrl: '/assets/cars/luxury.png', name: 'Luxury' },
+    { imageUrl: '/assets/cars/motorcycle.png', name: 'Motorcycle' },
+  ];
 }

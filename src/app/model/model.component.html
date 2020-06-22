@@ -1,0 +1,18 @@
+<div class="container-models">
+    <h1 class="extra-bold">Select your model</h1>
+    <div class="yellow-subline"></div>
+    <div class="model-list">
+        <div class="model" *ngFor="let model of models">
+            <img src="{{ model.imageUrl }}">
+            <p class="extra-bold">{{ model.name }}</p>
+        </div>
+    </div>
+    <owl-carousel-o [options]="customOptions" class="model-carousel">
+        <ng-template carouselSlide *ngFor="let model of models">
+            <div class="image-carousel">
+                <img src="{{ model.imageUrl }}">
+                <p class="extra-bold">{{ model.name }}</p>
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>

@@ -3,12 +3,12 @@ import { Constants } from './../../config/constants';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
 @Component({
-  selector: 'app-brands',
-  templateUrl: './brands.component.html',
-  styleUrls: ['./brands.component.scss'],
+  selector: 'app-model',
+  templateUrl: './model.component.html',
+  styleUrls: ['./model.component.scss'],
 })
-export class BrandsComponent implements OnInit {
-  brands: any = Constants.BRANDS;
+export class ModelComponent implements OnInit {
+  models: any = Constants.CARS;
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,
@@ -21,7 +21,7 @@ export class BrandsComponent implements OnInit {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 2,
+        items: 1,
       },
       600: {
         items: 3,
