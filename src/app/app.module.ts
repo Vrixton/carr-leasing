@@ -8,9 +8,10 @@ import { HeaderComponent } from './header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HomeComponent } from './home/home.component';
+import { WantCarComponent } from './want-car/want-car.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, WantCarComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
