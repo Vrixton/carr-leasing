@@ -92,6 +92,9 @@
       max-width: 300px;
       margin-bottom: 20px;
       display: flex;
+      @media (max-width: 654px) {
+        margin-bottom: 0;
+      }
       .title-step {
         font-size: 20px;
       }
