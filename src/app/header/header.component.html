@@ -1,5 +1,5 @@
-<mat-toolbar class="header" color="primary">
-    <mat-toolbar-row>
+<mat-toolbar id="header" class="header" (window:scroll)="activeMenu($event)">
+    <mat-toolbar-row class="desktop">
         <span>About us</span>
         <span>Services</span>
         <span>Partners</span>
@@ -8,4 +8,20 @@
         <span>Testimonials</span>
         <span>Contact us</span>
     </mat-toolbar-row>
+    <mat-toolbar-row class="movil">
+        <button (click)="menuOpen = !menuOpen"><i class="material-icons">menu</i></button>
+        <span class="brand">CarrLeasing</span>
+    </mat-toolbar-row>
 </mat-toolbar>
+<div class="menu-movil" [ngClass]="{'menu-closed': !menuOpen}">
+    <button (click)="menuOpen = !menuOpen"><i class="material-icons">close</i></button>
+    <ul>
+        <li class="brand">CarrLeasing</li>
+        <li>About us</li>
+        <li>Services</li>
+        <li>Partners</li>
+        <li>Models</li>
+        <li>Testimonials</li>
+        <li>Contact us</li>
+    </ul>
+</div>
