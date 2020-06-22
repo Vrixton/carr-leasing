@@ -27,31 +27,6 @@
     }
   }
 }
-.brand-carousel {
-  * {
-    max-height: 300px;
-  }
-  div.owl-carousel {
-    margin-top: 80px;
-  }
-  div.image-carousel {
-    width: 150px;
-    height: 150px;
-    img {
-      width: 50%;
-    }
-  }
-  div.owl-item,
-  .image-carousel.ng-star-inserted {
-    display: flex;
-    justify-content: center;
-  }
-}
-@media (min-width: 901px) {
-  .brand-carousel {
-    display: none;
-  }
-}
 
 .model-carousel {
   * {
