@@ -17,3 +17,18 @@
   position: absolute;
   margin-top: -40px;
 }
+.yellow-subline {
+  width: 50px;
+  height: 3px;
+  background-color: $yellow;
+  position: absolute;
+  border-radius: 2px;
+  left: calc(50% - 1.5px);
+}
+div.yellow-line {
+  width: 25%;
+  height: 3px;
+  background-color: $yellow;
+  padding: 0;
+  border-radius: 3px;
+}

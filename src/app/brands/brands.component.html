@@ -1,0 +1,16 @@
+<div class="container-brands">
+    <h1 class="extra-bold">Choose your brand</h1>
+    <div class="yellow-subline"></div>
+    <div class="brand-list">
+        <div class="brand" *ngFor="let brand of brands">
+            <img src="{{ brand.imageUrl }}">
+        </div>
+    </div>
+    <owl-carousel-o [options]="customOptions" class="brand-carousel">
+        <ng-template carouselSlide *ngFor="let brand of brands">
+            <div class="image-carousel">
+                <img src="{{ brand.imageUrl }}">
+            </div>
+        </ng-template>
+    </owl-carousel-o>
+</div>

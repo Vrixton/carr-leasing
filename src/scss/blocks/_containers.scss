@@ -40,12 +40,6 @@
       margin-top: 40px;
       text-align: justify;
     }
-    div.yellow-line {
-      width: 30%;
-      height: 3px;
-      background-color: $yellow;
-      padding: 0;
-    }
   }
   div.image-bg {
     position: absolute;
@@ -129,6 +123,43 @@
       span:last-child {
         margin-top: 58px;
       }
+    }
+  }
+}
+
+.container-brands {
+  min-height: 400px;
+  padding: 20px;
+  justify-content: center;
+  text-align: center;
+  .brand-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 50px 150px 0px 150px;
+    .brand {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+      width: 100px;
+      height: 100px;
+      background-position: center;
+      background-size: cover;
+      cursor: pointer;
+      img {
+        width: 60%;
+        transition: 0.3s;
+      }
+      &:hover {
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+  @media (max-width: 900px) {
+    .brand-list {
+      display: none;
     }
   }
 }

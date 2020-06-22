@@ -10,9 +10,10 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
 import { HomeComponent } from './home/home.component';
 import { WantCarComponent } from './want-car/want-car.component';
 import { HowWorksComponent } from './how-works/how-works.component';
+import { BrandsComponent } from './brands/brands.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, WantCarComponent, HowWorksComponent],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, WantCarComponent, HowWorksComponent, BrandsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
