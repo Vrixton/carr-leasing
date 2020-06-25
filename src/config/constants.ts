@@ -60,28 +60,28 @@ export class Constants {
       name: 'George Marill',
       city: 'Napls - Florida',
       testimonial:
-        'Carrleasing.com hizo un trabajo maravilloso avudandome a encontrar el vehiculo perfecto al precio justo en el momento exacto. El proceso fue muy transparente y sin ningun problema desde el principio. Estoy muy agradecido por el hecho de no haber tenido la necesidad de pisar un concesionario en ningun momento. Me sorprendio mucho que el auto fuera entregado en mi casa con todo el papeleo listo y firmado, ademas de que el contrato de arrendamiento antiguo fue retirado en menos de media hora. Estoy muy agradecido con todo e equipo.',
+        'Carrleasing.com They did a stellar job finding the perfect vehicle at the right price at exactly the right time. The process was transparent and hassle free from the beginning. I was grateful that there was never a need to step foot inside a dealership. was amazed that the car was dropped off at my house with all the paperwork signed and old lease taken back in less than a half hour. Highly recommend Carrleasing!!',
     },
     {
       imageUrl: '/assets/testimonials/2.jpeg',
       name: 'Charles & Jazmine Johnson',
       city: 'San Jose - California',
       testimonial:
-        'Estos chicos son geniales y su propuesta para el arrendamiento de vehiculos es super practica. Recibimos toda la informacion que necesitabamos a tiempo y realizamos toda la transaccion a traves del celular lo que nos permitio ahorrar tiempo y dinero. Tuvimos la suerte de contactar con Daniel, quien fue de gran ayuda para guiarnos a lo largo de todo el proceso. Sentimos que él estaba alli para ayudarnos y no para aprovecharse. El de verdad se preocupo por que obtuviéramos el mejor acuerdo y el mejor vehiculo, justo como lo queriamos. Gracias Carrleasing.com!',
+        'These guys are legit and changing the business models for leasing cars. Transaction and info can all be done via your phone. We were fortunate enough to be connected to Daniel who was a great help in guiding us along through the process. We understood that he`s there to help and assist, not take advantage. He cared about us getting the best deal. Thank you Carrleasing!',
     },
     {
       imageUrl: '/assets/testimonials/3.jpeg',
       name: 'Monica & Luis Lopez',
       city: 'San Jose - California',
       testimonial:
-        'Soy un cliente nuevo y es mi primera vez usando esta plataforma. Siempre he arrendado directamente con los distribuidores y siempre ha sido una pesadilla. Bueno, con Carrleasing.com ya no lo fué. Me entregaron el vehiculo a tiempo, cuando y donde dijeron que lo harian. Todos los papeles estaban listos cuando llego el conductor a concesionario y solo tardamos y 30 minutos en firmar los documentos, luego se tomaron el trabajo de mostrarme las caracteristicas y especificaciones del auto. La documentacion fue fiel a los acuerdos previamente establecidos y como se pactaron desde el comienzo. Me encanta mi nuevo auto y me encanta aun mas la practicidad del proceso para obtenerlo.',
+        'First time customer here. I always leased before directly from dealers and everyone knows what a pain that IS... well, no more, Carrleasing is here. They delivered exactly on time, and when they said they would. Right on the dot. All papers were ready when the dealer driver arrived and took 30 minutes to sign, then they showed me the car features. right after I got the keys. Documentation stated all amount exactly as what Daniel said it would be... love the car and love the leasing process even more.',
     },
     {
       imageUrl: '/assets/testimonials/4.jpeg',
       name: 'David Salgado',
       city: 'Miami - Florida',
       testimonial:
-        'Daniel me hizo sentir su prioridad durante todo el proceso y la interaccion que tuvimos, a diferencia de las experiencias pasadas que he tenido con otros intermediarios de autos donde me sentia solo un cliente mas. El fue mas alla de una simple venta y me proporciono toda a informacion necesaria sobre los automoviles que yo estaba considerando elegir para ayudarme • encontrar el vehiculo exacto dentro del presupuesto que tenia disponible. Gracias a su acompañamiento pude sentir la confianza necesaria para poder tomar la decision correcta desde la comodidad de mi casa. Ademas, me entregaron el auto en mi oficina. Gracias por todo Daniel.',
+        'Daniel made me feel like I was his top priority during every interaction we had, unlike past experiences I`ve had before with car salesman. He promptly went over and beyond providing the information on the cars that I was considering to help me find the exact vehicle I was looking for within the budget had, so could make the decision easily from home. The car was even delivered to me at my office.',
     },
   ];
 }
