@@ -2,8 +2,8 @@
   "name": "carr-leasing",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
     "heroku-postbuild": "ng build --prod",
+    "ng": "ng",
     "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
