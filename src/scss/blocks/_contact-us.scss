@@ -1,0 +1,61 @@
+.contact-us {
+  padding-top: 50px;
+  min-height: 180px;
+  background-color: $dark-blue;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  div {
+    min-width: 300px;
+  }
+  div.title {
+    padding-top: 20px;
+    font-size: 48px;
+    color: $white;
+    div {
+      padding-right: 10px;
+      opacity: 0.6;
+      cursor: pointer;
+      transition: 0.3s;
+      text-align: right;
+      margin-bottom: 10px;
+      letter-spacing: 8px;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  form {
+    div {
+      display: block;
+      label {
+        color: $white;
+      }
+    }
+    @media (max-width: 656px) {
+      div {
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      tr {
+        display: grid;
+      }
+    }
+  }
+  button.btn-contact-us {
+    border-radius: 5px;
+    border: 1px solid $yellow;
+    background-color: $transparent;
+    color: $yellow;
+    float: right;
+    margin-top: 20px;
+    width: 100px;
+    height: 35px;
+    cursor: pointer;
+    transition: 0.3s;
+    &:hover {
+      background-color: $transparent-black;
+    }
+  }
+}

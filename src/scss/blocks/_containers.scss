@@ -10,6 +10,15 @@
     letter-spacing: 10px;
     margin-bottom: 0px;
   }
+  .secondary-text {
+    margin-top: 13px;
+  }
+  @media (max-width: 750px) {
+    .principal-text {
+      font-size: 18px;
+      margin-top: 60px;
+    }
+  }
 }
 
 .container-want-car {
