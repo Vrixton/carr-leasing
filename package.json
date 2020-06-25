@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "http-server",
+    "start": "http-server ./dist",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
     "preinstall": "npm install -g angular-cli",
-    "postinstall": "ng build && mv -r dist/* ."
+    "postinstall": "ng build"
   },
   "engines": {
     "node": "12.18.0",
