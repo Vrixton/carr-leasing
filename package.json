@@ -2,13 +2,14 @@
   "name": "carr-leasing",
   "version": "0.0.0",
   "scripts": {
-    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "node server.js",
+    "start": "http-server",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "preinstall": "npm install -g angular-cli",
+    "postinstall": "ng build && mv dist/* ."
   },
   "engines": {
     "node": "12.18.0",
@@ -32,7 +33,6 @@
     "aos": "^3.0.0-beta.6",
     "express": "^4.17.1",
     "http-serve": "^1.0.1",
-    "http-server": "^0.12.3",
     "ngx-owl-carousel-o": "^3.0.1",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
