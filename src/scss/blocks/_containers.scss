@@ -23,11 +23,12 @@
 
 .container-want-car {
   background-color: $dark-blue;
-  height: 480px;
+  height: 500px;
   display: flex;
   div {
     flex: 1 1;
     padding: 50px;
+    padding-top: 100px;
     z-index: 1;
     h1 {
       letter-spacing: 10px;
@@ -49,6 +50,9 @@
       margin-top: 40px;
       text-align: justify;
     }
+    @media (max-width: 620px) {
+      padding-top: 50px;
+    }
   }
   div.image-bg {
     position: absolute;
@@ -69,7 +73,12 @@
 .container-how-work {
   background-color: $dark-blue;
   padding: 20px;
+  padding-bottom: 50px;
   min-height: 400px;
+  padding-top: 100px;
+  @media (max-width: 620px) {
+    padding-top: 20px;
+  }
   .title {
     margin-top: 50px;
     width: 100%;
@@ -144,6 +153,10 @@
   padding: 20px;
   justify-content: center;
   text-align: center;
+  padding-top: 100px;
+  @media (max-width: 620px) {
+    padding-top: 20px;
+  }
   .brand-list {
     display: flex;
     justify-content: center;
@@ -185,6 +198,10 @@
   padding: 20px;
   justify-content: center;
   text-align: center;
+  padding-top: 100px;
+  @media (max-width: 620px) {
+    padding-top: 20px;
+  }
   .model-list {
     display: flex;
     justify-content: center;

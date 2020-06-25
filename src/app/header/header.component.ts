@@ -18,4 +18,11 @@ export class HeaderComponent {
       document.getElementById('header').classList.remove('dark');
     }
   }
+
+  scroll(el) {
+    document.getElementById(el).scrollIntoView({ behavior: 'smooth' });
+  }
+  closeMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 }
