@@ -1,0 +1,32 @@
+mat-label.ng-star-inserted {
+  color: $yellow;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  background-color: $yellow;
+}
+.container-textarea {
+  textarea {
+    font-family: "GilroyLight";
+    width: 100%;
+    height: 80px;
+    border: 1px solid $yellow;
+    border-radius: 5px;
+    font-size: 16px;
+    color: $white !important;
+    background-color: transparent;
+    text-indent: 10px;
+  }
+}
+input {
+  color: $white !important;
+}
+form {
+  td {
+    padding-right: 10px;
+  }
+}
+
+::placeholder {
+  color: $yellow !important;
+}
