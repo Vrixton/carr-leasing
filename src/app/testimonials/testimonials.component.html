@@ -1,8 +1,9 @@
-<div class="container-testimonials">
+<div class="container-testimonials" id="testimonials">
     <h1 class="extra-bold">Testimonials</h1>
     <h5>What our clients says</h5>
-    <div class="yellow-subline"></div>
-    <owl-carousel-o [options]="customOptions" class="testimonials-carousel">
+    <div data-aos="fade-right" data-aos-easing="ease-in-out" class="yellow-subline"></div>
+    <owl-carousel-o [options]="customOptions" class="testimonials-carousel" data-aos="zoom-in"
+        data-aos-easing="ease-in-out">
         <ng-template carouselSlide *ngFor="let item of testimonials">
             <div class="testimonial">
                 <div class="border-dashed">

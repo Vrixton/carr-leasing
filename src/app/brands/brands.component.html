@@ -1,8 +1,8 @@
-<div class="container-brands">
+<div class="container-brands" id="brands">
     <h1 class="extra-bold">Choose your brand</h1>
-    <div class="yellow-subline"></div>
+    <div data-aos="fade-right" data-aos-easing="ease-in-out" class="yellow-subline"></div>
     <div class="brand-list">
-        <div class="brand" *ngFor="let brand of brands">
+        <div class="brand" *ngFor="let brand of brands" data-aos="flip-right" data-aos-easing="ease-in-out">
             <img src="{{ brand.imageUrl }}">
         </div>
     </div>

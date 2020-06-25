@@ -1,8 +1,8 @@
-<div class="container-models">
+<div class="container-models" id="models">
     <h1 class="extra-bold">Select your model</h1>
-    <div class="yellow-subline"></div>
+    <div data-aos="fade-right" data-aos-easing="ease-in-out" class="yellow-subline"></div>
     <div class="model-list">
-        <div class="model" *ngFor="let model of models">
+        <div class="model" *ngFor="let model of models" data-aos="fade-left" data-aos-easing="ease-in-out">
             <img src="{{ model.imageUrl }}">
             <p class="extra-bold">{{ model.name }}</p>
         </div>

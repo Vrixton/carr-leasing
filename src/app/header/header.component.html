@@ -1,27 +1,27 @@
 <mat-toolbar id="header" class="header" (window:scroll)="activeMenu($event)">
     <mat-toolbar-row class="desktop">
-        <span>About us</span>
-        <span>Services</span>
-        <span>Partners</span>
-        <span class="brand">CarrLeasing</span>
-        <span>Models</span>
-        <span>Testimonials</span>
-        <span>Contact us</span>
+        <span (click)="scroll('wantCar')">About us</span>
+        <span (click)="scroll('howWorks')">Services</span>
+        <span (click)="scroll('brands')">Partners</span>
+        <span (click)="scroll('carrleasing')" class="brand">CarrLeasing</span>
+        <span (click)="scroll('models')">Models</span>
+        <span (click)="scroll('testimonials')">Testimonials</span>
+        <span (click)="scroll('contactUs')">Contact us</span>
     </mat-toolbar-row>
     <mat-toolbar-row class="movil">
         <button (click)="menuOpen = !menuOpen"><i class="material-icons">menu</i></button>
-        <span class="brand">CarrLeasing</span>
+        <span class="brand" (click)="scroll('carrleasing')">CarrLeasing</span>
     </mat-toolbar-row>
 </mat-toolbar>
 <div class="menu-movil" [ngClass]="{'menu-closed': !menuOpen}">
     <button (click)="menuOpen = !menuOpen"><i class="material-icons">close</i></button>
     <ul>
-        <li class="brand">CarrLeasing</li>
-        <li>About us</li>
-        <li>Services</li>
-        <li>Partners</li>
-        <li>Models</li>
-        <li>Testimonials</li>
-        <li>Contact us</li>
+        <li (click)="scroll('carrleasing'); closeMenu();" class="brand">CarrLeasing</li>
+        <li (click)="scroll('wantCar'); closeMenu();">About us</li>
+        <li (click)="scroll('howWorks'); closeMenu();">Services</li>
+        <li (click)="scroll('brands'); closeMenu();">Partners</li>
+        <li (click)="scroll('models'); closeMenu();">Models</li>
+        <li (click)="scroll('testimonials'); closeMenu();">Testimonials</li>
+        <li (click)="scroll('contactUs'); closeMenu();">Contact us</li>
     </ul>
 </div>
