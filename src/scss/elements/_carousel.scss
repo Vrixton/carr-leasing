@@ -36,8 +36,12 @@
     margin-top: 80px;
   }
   div.image-carousel {
-    img {
-      width: 90%;
+    div {
+      width: 250px;
+      height: 200px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
   div.owl-item,

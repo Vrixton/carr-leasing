@@ -51,7 +51,7 @@ export class Constants {
     { imageUrl: '/assets/cars/SUV.png', name: 'Suv' },
     { imageUrl: '/assets/cars/cuope.png', name: 'Cuope' },
     { imageUrl: '/assets/cars/compact.png', name: 'Compact' },
-    { imageUrl: '/assets/cars/luxury.png', name: 'Luxury' },
+    { imageUrl: '/assets/cars/luxury2.png', name: 'Luxury' },
     { imageUrl: '/assets/cars/motorcycle.png', name: 'Motorcycle' },
   ];
   public static TESTIMONIALS = [

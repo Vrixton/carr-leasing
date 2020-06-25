@@ -3,14 +3,14 @@
     <div data-aos="fade-right" data-aos-easing="ease-in-out" class="yellow-subline"></div>
     <div class="model-list">
         <div class="model" *ngFor="let model of models" data-aos="fade-left" data-aos-easing="ease-in-out">
-            <img src="{{ model.imageUrl }}">
+            <div [ngStyle]="{'background-image': 'url(' + model.imageUrl + ')'}"></div>
             <p class="extra-bold">{{ model.name }}</p>
         </div>
     </div>
     <owl-carousel-o [options]="customOptions" class="model-carousel">
         <ng-template carouselSlide *ngFor="let model of models">
             <div class="image-carousel">
-                <img src="{{ model.imageUrl }}">
+                <div [ngStyle]="{'background-image': 'url(' + model.imageUrl + ')'}"></div>
                 <p class="extra-bold">{{ model.name }}</p>
             </div>
         </ng-template>
