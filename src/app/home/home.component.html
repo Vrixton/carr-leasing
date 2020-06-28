@@ -1,13 +1,10 @@
 <div class="container-home-text" id="carrleasing">
-    <p class="principal-text"><span class="extra-bold">Sales</span> and leasing<br>beat the <span
-            class="extra-bold">dealer</span></p>
-    <p class="secondary-text">We offer the lowest prices!</p>
+    <p class="principal-text"><span class="extra-bold">{{ 'SALES' | translate }}</span> {{ 'AND' | translate }} <span
+            class="extra-bold">{{ 'LEASING' | translate }}</span><br>{{ 'SLOGAN' | translate }}</p>
+    <p class="secondary-text">{{ 'SECOND_HOME_TEXT' | translate }}</p>
 </div>
 <owl-carousel-o [options]="customOptions" class="carousel">
-    <ng-template carouselSlide>
-        <div class="image-carousel" style="background-image: url(./../../assets/images/home.png);"></div>
-    </ng-template>
-    <ng-template carouselSlide>
-        <div class="image-carousel" style="background-image: url(./../../assets/images/home.png);"></div>
+    <ng-template carouselSlide *ngFor="let item of images">
+        <div class="image-carousel" [ngStyle]="{'background-image': 'url(' + item.imageUrl + ')'}"></div>
     </ng-template>
 </owl-carousel-o>

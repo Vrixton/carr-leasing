@@ -32,3 +32,33 @@ div.yellow-line {
   padding: 0;
   border-radius: 3px;
 }
+.change-language {
+  background: #757575;
+  border-radius: 7px;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  color: $white;
+  font-weight: bold;
+  transition: 0.3s;
+  &:hover {
+    background-color: #b1b1b1;
+  }
+}
+.testimonial-d {
+  font-size: 200px;
+  font-family: Arial;
+  color: $dark-grey;
+  position: absolute;
+  @media (max-width: 800px) {
+    display: none;
+  }
+}
+.testimonial-d.left {
+  margin-left: -380px;
+  margin-top: -250px;
+}
+.testimonial-d.right {
+  margin-left: 320px;
+  margin-top: -130px;
+}

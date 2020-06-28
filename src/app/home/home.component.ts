@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Constants } from './../../config/constants';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
+  images: any = Constants.HOME_CAROUSEL;
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,

@@ -1,5 +1,5 @@
 <div class="container-testimonials" id="testimonials">
-    <h1 class="extra-bold">Testimonials</h1>
+    <h1 class="extra-bold">{{ 'TESTIMONIALS_TITLE' | translate }}</h1>
     <h5>What our clients says</h5>
     <div data-aos="fade-right" data-aos-easing="ease-in-out" class="yellow-subline"></div>
     <owl-carousel-o [options]="customOptions" class="testimonials-carousel" data-aos="zoom-in"
@@ -11,8 +11,12 @@
                 </div>
                 <p class="name">{{ item.name }}</p>
                 <p class="city">{{ item.city }}</p>
-                <p class="text">{{ item.testimonial }}</p>
+                <p class="text">{{ item.testimonial | translate }}</p>
             </div>
         </ng-template>
     </owl-carousel-o>
+    <div>
+        <span class="testimonial-d left">“</span>
+        <span class="testimonial-d right">”</span>
+    </div>
 </div>

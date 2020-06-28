@@ -1,22 +1,22 @@
 <div class="contact-us" id="contactUs">
     <div class="title" data-aos="zoom-in-right" data-aos-easing="ease-in-out">
-        <div>CON</div>
-        <div>TACT</div>
-        <div>US</div>
+        <div>{{ 'CON' | translate }}</div>
+        <div>{{ 'TACT' | translate }}</div>
+        <div>{{ 'US' | translate }}</div>
     </div>
-    <div data-aos="zoom-in-left" data-aos-easing="ease-in-out">
+    <div>
         <form method="get" enctype="text/plain">
             <table cellspacing="0">
                 <tr>
                     <td>
                         <mat-form-field>
-                            <mat-label>First name</mat-label>
+                            <mat-label>{{ 'FIRST_NAME' | translate }}</mat-label>
                             <input placeholder="John Michael" matInput>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
-                            <mat-label>Last name</mat-label>
+                            <mat-label>{{ 'LAST_NAME' | translate }}</mat-label>
                             <input placeholder="Doe McCartney" matInput>
                         </mat-form-field>
                     </td>
@@ -24,13 +24,13 @@
                 <tr>
                     <td>
                         <mat-form-field>
-                            <mat-label>Email</mat-label>
+                            <mat-label>{{ 'EMAIL' | translate }}</mat-label>
                             <input placeholder="Doemichael@example.com" matInput>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
-                            <mat-label>Phone</mat-label>
+                            <mat-label>{{ 'PHONE' | translate }}</mat-label>
                             <input placeholder="300-000-000" matInput>
                         </mat-form-field>
                     </td>
@@ -38,9 +38,9 @@
 
             </table>
             <div class="container-textarea">
-                <textarea placeholder="Message" id="message"></textarea>
+                <textarea placeholder="{{ 'MESSAGE' | translate }}" id="message"></textarea>
             </div>
-            <button type="submit" class="btn-contact-us">Submit</button>
+            <button type="submit" class="btn-contact-us">{{ 'SUBMIT' | translate }}</button>
         </form>
     </div>
 </div>

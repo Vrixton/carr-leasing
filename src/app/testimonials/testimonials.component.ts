@@ -7,26 +7,24 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   templateUrl: './testimonials.component.html',
   styleUrls: ['./testimonials.component.scss'],
 })
-export class TestimonialsComponent implements OnInit {
+export class TestimonialsComponent {
   testimonials: any = Constants.TESTIMONIALS;
   customOptions: OwlOptions = {
     loop: true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 3000,
     mouseDrag: false,
     touchDrag: true,
     pullDrag: false,
     dots: true,
     navSpeed: 700,
-    navText: ['', ''],
+    navText: ['<', '>'],
     responsive: {
       0: {
         items: 1,
       },
     },
-    nav: false,
+    nav: true,
   };
   constructor() {}
-
-  ngOnInit(): void {}
 }

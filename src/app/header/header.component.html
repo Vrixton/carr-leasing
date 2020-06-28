@@ -1,27 +1,29 @@
 <mat-toolbar id="header" class="header" (window:scroll)="activeMenu($event)">
     <mat-toolbar-row class="desktop">
-        <span (click)="scroll('wantCar')">About us</span>
-        <span (click)="scroll('howWorks')">Services</span>
-        <span (click)="scroll('brands')">Partners</span>
-        <span (click)="scroll('carrleasing')" class="brand">CarrLeasing</span>
-        <span (click)="scroll('models')">Models</span>
-        <span (click)="scroll('testimonials')">Testimonials</span>
-        <span (click)="scroll('contactUs')">Contact us</span>
+        <span> </span>
+        <span (click)="scroll('wantCar')">{{ 'ABOUT_US' | translate }}</span>
+        <span (click)="scroll('howWorks')">{{ 'SERVICES' | translate }}</span>
+        <span (click)="scroll('brands')">{{ 'PARTNERS' | translate }}</span>
+        <span (click)="scroll('carrleasing')" class="brand">{{ 'CARRLEASING' | translate }}</span>
+        <span (click)="scroll('models')">{{ 'MODELS' | translate }}</span>
+        <span (click)="scroll('testimonials')">{{ 'TESTIMONIALS' | translate }}</span>
+        <span (click)="scroll('contactUs')">{{ 'CONTACT_US' | translate }}</span>
+        <span class="change-language" (click)="switchLanguage($event)">{{ 'SWITCH_LANGUAGE' | translate }}</span>
     </mat-toolbar-row>
     <mat-toolbar-row class="movil">
         <button (click)="menuOpen = !menuOpen"><i class="material-icons">menu</i></button>
-        <span class="brand" (click)="scroll('carrleasing')">CarrLeasing</span>
+        <span class="brand" (click)="scroll('carrleasing')">{{'CARRLEASING' | translate }}</span>
     </mat-toolbar-row>
 </mat-toolbar>
 <div class="menu-movil" [ngClass]="{'menu-closed': !menuOpen}">
     <button (click)="menuOpen = !menuOpen"><i class="material-icons">close</i></button>
     <ul>
-        <li (click)="scroll('carrleasing'); closeMenu();" class="brand">CarrLeasing</li>
-        <li (click)="scroll('wantCar'); closeMenu();">About us</li>
-        <li (click)="scroll('howWorks'); closeMenu();">Services</li>
-        <li (click)="scroll('brands'); closeMenu();">Partners</li>
-        <li (click)="scroll('models'); closeMenu();">Models</li>
-        <li (click)="scroll('testimonials'); closeMenu();">Testimonials</li>
-        <li (click)="scroll('contactUs'); closeMenu();">Contact us</li>
+        <li (click)="scroll('carrleasing'); closeMenu();" class="brand">{{'CARRLEASING' | translate }}</li>
+        <li (click)="scroll('wantCar'); closeMenu();">{{ 'ABOUT_US' | translate }}</li>
+        <li (click)="scroll('howWorks'); closeMenu();">{{ 'SERVICES' | translate }}</li>
+        <li (click)="scroll('brands'); closeMenu();">{{ 'PARTNERS' | translate }}</li>
+        <li (click)="scroll('models'); closeMenu();">{{ 'MODELS' | translate }}</li>
+        <li (click)="scroll('testimonials'); closeMenu();">{{ 'TESTIMONIALS' | translate }}</li>
+        <li (click)="scroll('contactUs'); closeMenu();">{{ 'ABOUT_US' | translate }}</li>
     </ul>
 </div>
