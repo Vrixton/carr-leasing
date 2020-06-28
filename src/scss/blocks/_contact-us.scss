@@ -59,3 +59,23 @@
     }
   }
 }
+
+@media screen and (min-device-width: 1350px), screen and (min-width: 1350px) {
+  .contact-us {
+    padding-top: 100px;
+    div.title {
+      font-size: 55px;
+    }
+    input,
+    textarea,
+    label {
+      font-size: 20px !important;
+    }
+    button.btn-contact-us {
+      margin-top: 20px;
+      width: 130px;
+      height: 45px;
+      font-size: 20px;
+    }
+  }
+}

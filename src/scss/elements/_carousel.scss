@@ -36,6 +36,12 @@
   div.owl-carousel {
     margin-top: 80px;
   }
+  .owl-dots.ng-star-inserted {
+    span {
+      height: 5px;
+      width: 15px;
+    }
+  }
   div.image-carousel {
     div {
       width: 250px;
@@ -110,6 +116,56 @@
     }
     .text {
       font-size: 15px;
+    }
+  }
+}
+
+@media screen and (min-device-width: 1350px), screen and (min-width: 1350px) {
+  .carousel {
+    * {
+      max-height: 900px;
+    }
+    div.image-carousel {
+      height: 900px;
+    }
+    .owl-dots {
+      margin-top: -50px !important;
+      div {
+        span {
+          padding: 0 5px !important;
+          background-color: #adadad !important;
+          height: 6px !important;
+        }
+      }
+    }
+  }
+
+  .testimonials-carousel {
+    .owl-dots.ng-star-inserted {
+      span {
+        height: 10px;
+        width: 25px;
+      }
+    }
+    .testimonial {
+      .border-dashed {
+        width: 160px;
+        height: 160px;
+        .img-client {
+          width: 140px;
+          height: 140px;
+          margin-top: 10px;
+        }
+      }
+      .name {
+        font-size: 30px;
+      }
+      .city {
+        font-size: 20px;
+      }
+      .text {
+        font-size: 20px;
+      }
     }
   }
 }

@@ -4,12 +4,20 @@
   padding: 50px;
   color: white;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   flex-wrap: wrap;
+  @media (max-width: 541px) {
+    justify-content: flex-start;
+  }
   p a {
     color: $white !important;
     margin-bottom: 5px;
     text-decoration: none !important;
+  }
+  div {
+    @media (max-width: 654px) {
+      margin-bottom: 20px;
+    }
   }
   span.brand {
     font-weight: bold !important;
@@ -37,6 +45,32 @@
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+    }
+  }
+}
+@media screen and (min-device-width: 1350px), screen and (min-width: 1350px) {
+  .footer {
+    p a {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+    span.brand {
+      font-size: 30px !important;
+    }
+    .cont-terms {
+      font-size: 20px;
+    }
+    span.extra-bold {
+      font-size: 25px;
+    }
+    div.icons-container {
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 200px;
+      div.social-media-icon {
+        width: 30px;
+        height: 30px;
+      }
     }
   }
 }

@@ -89,3 +89,16 @@
     margin-top: -200% !important;
   }
 }
+@media screen and (min-device-width: 1350px), screen and (min-width: 1350px) {
+  .header {
+    mat-toolbar-row {
+      span {
+        font-size: 20px !important;
+        font-weight: 100 !important;
+      }
+      span.brand {
+        font-size: 25px !important;
+      }
+    }
+  }
+}

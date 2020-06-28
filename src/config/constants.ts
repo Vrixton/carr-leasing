@@ -6,6 +6,9 @@ export class Constants {
     { imageUrl: '/assets/images/bg/4.png' },
     { imageUrl: '/assets/images/bg/5.png' },
     { imageUrl: '/assets/images/bg/6.png' },
+    { imageUrl: '/assets/images/bg/7.png' },
+    { imageUrl: '/assets/images/bg/8.png' },
+    { imageUrl: '/assets/images/bg/9.png' },
   ];
   public static BRANDS = [
     { imageUrl: '/assets/images/brands/Grupo 129.svg' },
