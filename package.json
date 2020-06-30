@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "http-server ./dist/carr-leasing",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -37,6 +37,7 @@
     "http-serve": "^1.0.1",
     "http-server": "^0.12.3",
     "ngx-owl-carousel-o": "^3.0.1",
+    "ngx-simple-modal": "^1.4.13",
     "node-sass": "^4.14.1",
     "path": "^0.12.7",
     "rxjs": "~6.5.4",

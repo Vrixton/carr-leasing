@@ -1,0 +1,35 @@
+.form-customize {
+  h3 {
+    letter-spacing: 8px !important;
+  }
+  h3.slogan {
+    color: $dark-grey;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+  table {
+    width: 100% !important;
+    border-bottom: 1px dashed $dark-grey;
+    padding-bottom: 30px;
+    margin-bottom: 50px;
+    tr td {
+      mat-form-field {
+        width: 100%;
+      }
+    }
+  }
+  mat-label.ng-star-inserted {
+    color: $dark-blue;
+  }
+
+  .mat-form-field-appearance-legacy .mat-form-field-underline {
+    background-color: $dark-blue;
+  }
+  input {
+    color: $dark-blue !important;
+  }
+  ::placeholder {
+    color: $dark-blue !important;
+  }
+}

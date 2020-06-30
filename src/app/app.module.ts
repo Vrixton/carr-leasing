@@ -5,6 +5,9 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
+import { MatRadioModule } from '@angular/material/radio';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { SimpleModalModule } from 'ngx-simple-modal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +23,7 @@ import { CustomizeComponent } from './customize/customize.component';
 import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { CustomizeFormComponent } from './customize-form/customize-form.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
@@ -38,15 +42,19 @@ export function createTranslateLoader(http: HttpClient) {
     TestimonialsComponent,
     FooterComponent,
     ContactUsComponent,
+    CustomizeFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    MatRadioModule,
+    MatCheckboxModule,
     CarouselModule,
     MatInputModule,
     HttpClientModule,
+    SimpleModalModule.forRoot({ container: document.body }),
     TranslateModule.forRoot({
       defaultLanguage: 'en',
       loader: {
@@ -56,6 +64,7 @@ export function createTranslateLoader(http: HttpClient) {
       },
     }),
   ],
+  entryComponents: [CustomizeFormComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
