@@ -8,7 +8,6 @@ export class Constants {
     { imageUrl: '/assets/images/bg/6.png' },
     { imageUrl: '/assets/images/bg/7.png' },
     { imageUrl: '/assets/images/bg/8.png' },
-    { imageUrl: '/assets/images/bg/9.png' },
   ];
   public static BRANDS = [
     { imageUrl: '/assets/images/brands/Grupo 129.svg' },
@@ -60,7 +59,7 @@ export class Constants {
     { imageUrl: '/assets/images/cars/convertible.png', name: 'Convertible' },
     { imageUrl: '/assets/images/cars/wagon.png', name: 'Wagon' },
     { imageUrl: '/assets/images/cars/SUV.png', name: 'Suv' },
-    { imageUrl: '/assets/images/cars/cuope.png', name: 'Cuope' },
+    { imageUrl: '/assets/images/cars/cuope.png', name: 'Coupe' },
     { imageUrl: '/assets/images/cars/compact.png', name: 'Compact' },
     { imageUrl: '/assets/images/cars/luxury.png', name: 'Luxury' },
     { imageUrl: '/assets/images/cars/motorcycle.png', name: 'Motorcycle' },
@@ -69,19 +68,19 @@ export class Constants {
     {
       imageUrl: '/assets/images/testimonials/1.jpeg',
       name: 'George Marill',
-      city: 'Napls - Florida',
+      city: 'Naples - Florida',
       testimonial: 'TESTIMONIAL1',
     },
     {
       imageUrl: '/assets/images/testimonials/2.jpeg',
       name: 'Charles & Jazmine Johnson',
-      city: 'San Jose - California',
+      city: 'Chicago - Illinois',
       testimonial: 'TESTIMONIAL2',
     },
     {
       imageUrl: '/assets/images/testimonials/3.jpeg',
       name: 'Monica & Luis Lopez',
-      city: 'San Jose - California',
+      city: 'San José - California',
       testimonial: 'TESTIMONIAL3',
     },
     {
