@@ -3,6 +3,7 @@ import { SimpleModalComponent } from 'ngx-simple-modal';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators, EmailValidator } from '@angular/forms';
 import { Constants } from './../../config/constants';
+import { SendEmailService } from '../services/send-email/send-email.service';
 export interface ConfirmModel {
   title: string;
   message: string;
@@ -28,7 +29,7 @@ export class CustomizeFormComponent
   driveSystems: any = Constants.DRIVE_SYSTEMS;
   durations: any = Constants.DURATIONS;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private sendEmail: SendEmailService) {
     super();
   }
   ngOnInit(): void {
@@ -69,6 +70,18 @@ export class CustomizeFormComponent
     });
   }
   sendQuote(data) {
-    console.log('data: ', data);
+    this.sendEmail
+      .post(
+        data.value.ContactInformation.firstName +
+          ' ' +
+          data.value.ContactInformation.firstName,
+        data.value.ContactInformation.email,
+        'CUSTOMIZE CAR',
+        'Aqui va el contenido...',
+        'CUSTOMIZE_CAR'
+      )
+      .subscribe((response) => {
+        console.log(response);
+      });
   }
 }
