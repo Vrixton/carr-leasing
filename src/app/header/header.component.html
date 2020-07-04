@@ -13,6 +13,7 @@
     <mat-toolbar-row class="movil">
         <button (click)="menuOpen = !menuOpen"><i class="material-icons">menu</i></button>
         <span class="brand" (click)="scroll('carrleasing')">{{'CARRLEASING' | translate }}</span>
+        <span class="change-language" (click)="switchLanguage($event)">{{ 'SWITCH_LANGUAGE' | translate }}</span>
     </mat-toolbar-row>
 </mat-toolbar>
 <div class="menu-movil" [ngClass]="{'menu-closed': !menuOpen}">

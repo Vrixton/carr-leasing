@@ -9,6 +9,7 @@
   overflow: auto;
   padding-top: 50px !important;
   padding-bottom: 200px !important;
+
   button.btn-close {
     position: fixed;
     color: white;
@@ -19,6 +20,7 @@
     font-size: 25px;
     cursor: pointer;
   }
+
   .modal-body {
     padding: 35px;
     background-color: $white;
@@ -26,7 +28,8 @@
     max-width: 500px;
     margin: 0 auto;
   }
-  .btn-customize-submit {
+
+  button.btn-customize-submit {
     width: 150px;
     height: 40px;
     font-size: 18px;
@@ -38,4 +41,9 @@
     margin: 20px auto;
     cursor: pointer;
   }
+button.btn-customize-submit:disabled {
+  background-color: $grey;
+  color: $dark-grey;
+  border-color: $dark-grey;
+}
 }

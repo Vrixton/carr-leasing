@@ -2,23 +2,27 @@
   h3 {
     letter-spacing: 8px !important;
   }
+
   h3.slogan {
     color: $dark-grey;
     text-align: center;
     margin-top: 20px;
     margin-bottom: 50px;
   }
+
   table {
     width: 100% !important;
     border-bottom: 1px dashed $dark-grey;
     padding-bottom: 30px;
     margin-bottom: 50px;
+
     tr td {
       mat-form-field {
         width: 100%;
       }
     }
   }
+
   mat-label.ng-star-inserted {
     color: $dark-blue;
   }
@@ -26,10 +30,52 @@
   .mat-form-field-appearance-legacy .mat-form-field-underline {
     background-color: $dark-blue;
   }
+
   input {
     color: $dark-blue !important;
   }
+
   ::placeholder {
     color: $dark-blue !important;
   }
+}
+
+
+@media (max-width: 656px) {
+  table.customize-table {
+
+    div {
+      flex-wrap: wrap !important;
+      width: 100%;
+    }
+
+
+    mat-radio-button.mat-radio-button {
+      width: 20px !important;
+    }
+
+
+    div.mat-checkbox-inner-container {
+      width: 16px !important;
+    }
+
+    tr {
+      display: grid !important;
+
+
+      label.mat-checkbox-layout {
+        margin-bottom: 15px;
+      }
+    }
+
+    .mat-select-arrow {
+      width: 0 !important;
+    }
+
+
+  }
+}
+
+mat-radio-group.mat-radio-group {
+  display: contents !important;
 }

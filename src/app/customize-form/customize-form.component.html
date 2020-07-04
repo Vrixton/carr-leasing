@@ -1,21 +1,21 @@
 <div class="modal-content">
     <div class="modal-body">
         <button type="button" class="btn-close" (click)="close()">x</button>
-        <form action="" class="form-customize">
+        <form [formGroup]="customizeData" (ngSubmit)="sendQuote(customizeData)" class="form-customize">
             <h2 class="extra-bold">{{ 'CUSTOMIZE_VEHICLE' | translate }}</h2>
             <h3>{{ 'CONTACT_INFORMATION' | translate }}</h3>
-            <table cellspacing="0">
+            <table class="customize-table" formGroupName="ContactInformation">
                 <tr>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'FIRST_NAME' | translate }}</mat-label>
-                            <input placeholder="John Michael" matInput>
+                            <input formControlName="firstName" placeholder="John Michael" matInput required>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'LAST_NAME' | translate }}</mat-label>
-                            <input placeholder="Doe McCartney" matInput>
+                            <input formControlName="lastName" placeholder="Doe McCartney" matInput required>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -23,13 +23,13 @@
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'EMAIL' | translate }}</mat-label>
-                            <input placeholder="Doemichael@example.com" matInput>
+                            <input formControlName="email" placeholder="Doemichael@example.com" matInput required>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'PHONE' | translate }}</mat-label>
-                            <input placeholder="300-000-000" matInput>
+                            <input formControlName="phone" placeholder="300-000-000" matInput required>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -37,30 +37,38 @@
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'STATE' | translate }}</mat-label>
-                            <input placeholder="New York" matInput>
+                            <mat-select formControlName="state" required>
+                                <mat-option *ngFor="let state of states" [value]="state.name">
+                                    {{ state.name }}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'CITY' | translate }}</mat-label>
-                            <input placeholder="New York" matInput>
+                            <input formControlName="city" placeholder="New York" matInput required>
                         </mat-form-field>
                     </td>
                 </tr>
             </table>
             <h3>{{ 'VEHICLE_INFORMATION' | translate }}</h3>
-            <table cellspacing="0">
+            <table class="customize-table" formGroupName="VehicleInformation">
                 <tr>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'BRANDS' | translate }}</mat-label>
-                            <input placeholder="BMW" matInput>
+                            <mat-select formControlName="brand">
+                                <mat-option *ngFor="let brand of brands" [value]="brand.name">
+                                    {{ brand.name }}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'MODEL' | translate }}</mat-label>
-                            <input placeholder="MS" matInput>
+                            <input formControlName="model" placeholder="MS" matInput>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -68,36 +76,44 @@
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'YEAR' | translate }}</mat-label>
-                            <input placeholder="2005" matInput>
+                            <mat-select formControlName="year">
+                                <mat-option *ngFor="let year of years" [value]="year.name">
+                                    {{ year.name }}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'MILEAGE' | translate }}</mat-label>
-                            <input placeholder="1000/5000" matInput>
+                            <input formControlName="mileage" placeholder="1000/5000" matInput>
                         </mat-form-field>
                     </td>
                 </tr>
                 <tr>
-                    <td>
-                        <mat-radio-button value="new">{{ 'NEW' | translate }}</mat-radio-button>
-                    </td>
-                    <td>
-                        <mat-radio-button value="used">{{ 'USED' | translate }}</mat-radio-button>
-                    </td>
+                    <mat-radio-group formControlName="status">
+                        <td>
+                            <mat-radio-button value="New">{{ 'NEW' | translate }}
+                            </mat-radio-button>
+                        </td>
+                        <td>
+                            <mat-radio-button value="Used">{{ 'USED' | translate }}
+                            </mat-radio-button>
+                        </td>
+                    </mat-radio-group>
                 </tr>
 
                 <tr>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'EXTERIOR_COLOR' | translate }}</mat-label>
-                            <input placeholder="Blue" matInput>
+                            <input formControlName="exteriorColor" placeholder="Blue" matInput>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'INTERIOR_COLOR' | translate }}</mat-label>
-                            <input placeholder="Brown" matInput>
+                            <input formControlName="interiorColor" placeholder="Brown" matInput>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -105,13 +121,17 @@
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'AUDIO_QUALITY' | translate }}</mat-label>
-                            <input placeholder="Premium" matInput>
+                            <mat-select formControlName="audioQuality">
+                                <mat-option *ngFor="let audioQuality of audioQualities" [value]="audioQuality.name">
+                                    {{ audioQuality.name }}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'SPECIAL_FEATURES' | translate }}</mat-label>
-                            <input placeholder="Leather Upholstery" matInput>
+                            <input formControlName="specialFeatures" placeholder="Leather Upholstery" matInput>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -119,13 +139,21 @@
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'BRAKES' | translate }}</mat-label>
-                            <input placeholder="Disc Brakes" matInput>
+                            <mat-select formControlName="brakes">
+                                <mat-option *ngFor="let brake of brakes" [value]="brake.name">
+                                    {{ brake.name }}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'TRANSMISSION' | translate }}</mat-label>
-                            <input placeholder="Manual" matInput>
+                            <mat-select formControlName="transmission">
+                                <mat-option *ngFor="let transmission of transmissions" [value]="transmission.name">
+                                    {{ transmission.name }}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -133,25 +161,33 @@
                     <td colspan="2">
                         <mat-form-field>
                             <mat-label>{{ 'DRIVE_SYSTEM' | translate }}</mat-label>
-                            <input placeholder="Two Wheel Drive" matInput>
+                            <mat-select formControlName="driveSystem">
+                                <mat-option *ngFor="let driveSystem of driveSystems" [value]="driveSystem.name">
+                                    {{ driveSystem.name }}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </td>
                 </tr>
             </table>
 
             <h3>{{ 'LEASING_FINANSING_TERMS' | translate }}</h3>
-            <table cellspacing="0">
+            <table class="customize-table" formGroupName="FinancingTerms">
                 <tr>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'DURATION' | translate }}</mat-label>
-                            <input placeholder="24" matInput>
+                            <mat-select formControlName="duration">
+                                <mat-option *ngFor="let duration of durations" [value]="duration.name">
+                                    {{ duration.name }}
+                                </mat-option>
+                            </mat-select>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'ANNUAL_MILEAGE' | translate }}</mat-label>
-                            <input placeholder="12000" matInput>
+                            <input formControlName="annualMileage" placeholder="12000" matInput>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -159,7 +195,7 @@
                     <td colspan="2">
                         <mat-form-field>
                             <mat-label>{{ 'DOWN_PAYMENT' | translate }}</mat-label>
-                            <input placeholder="$4000" matInput>
+                            <input formControlName="downPayment" placeholder="$4000" matInput>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -167,32 +203,37 @@
                     <td colspan="2">
                         <mat-form-field>
                             <mat-label>{{ 'MONTHLY_BUDGET' | translate }}</mat-label>
-                            <input placeholder="$5000" matInput>
+                            <input formControlName="monthlyBudget" placeholder="$5000" matInput>
                         </mat-form-field>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <mat-checkbox class="checkbox-cust-form">{{ 'PRE_PAID_MAINTENANCE' | translate }}
+                        <mat-checkbox formControlName="prepaidMaintenance" class="checkbox-cust-form">
+                            {{ 'PRE_PAID_MAINTENANCE' | translate }}
                         </mat-checkbox>
                     </td>
                     <td>
-                        <mat-checkbox class="checkbox-cust-form">{{ 'TIRE_WHEEL_PROTECTION' | translate }}
+                        <mat-checkbox formControlName="tireWheelProtection" class="checkbox-cust-form">
+                            {{ 'TIRE_WHEEL_PROTECTION' | translate }}
                         </mat-checkbox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <mat-checkbox class="checkbox-cust-form">{{ 'APPEARANCE_PROTECTION' | translate }}
+                        <mat-checkbox formControlName="appearanceProtection" class="checkbox-cust-form">
+                            {{ 'APPEARANCE_PROTECTION' | translate }}
                         </mat-checkbox>
                     </td>
                     <td>
-                        <mat-checkbox class="checkbox-cust-form">{{ 'EXCESS_WEAR_TEAR' | translate }}</mat-checkbox>
+                        <mat-checkbox formControlName="excessWearTear" class="checkbox-cust-form">
+                            {{ 'EXCESS_WEAR_TEAR' | translate }}</mat-checkbox>
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <mat-checkbox class="checkbox-cust-form">{{ 'DENT_DING_PROTECTION' | translate }}
+                        <mat-checkbox formControlName="dentDingProtection" class="checkbox-cust-form">
+                            {{ 'DENT_DING_PROTECTION' | translate }}
                         </mat-checkbox>
                     </td>
                 </tr>

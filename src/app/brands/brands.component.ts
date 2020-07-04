@@ -8,7 +8,7 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
   styleUrls: ['./brands.component.scss'],
 })
 export class BrandsComponent implements OnInit {
-  brands: any = Constants.BRANDS;
+  brands: any = Constants.BRAND_IMAGES;
   customOptions: OwlOptions = {
     loop: true,
     autoplay: true,

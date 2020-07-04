@@ -1,14 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+// LIBRARIES
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
-import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { SimpleModalModule } from 'ngx-simple-modal';
+// MATERIAL COMPONENTS
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
-import { SimpleModalModule } from 'ngx-simple-modal';
-
+import { MatSelectModule } from '@angular/material/select';
+// APP COMPONENTS
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -51,9 +55,12 @@ export function createTranslateLoader(http: HttpClient) {
     MatToolbarModule,
     MatRadioModule,
     MatCheckboxModule,
+    MatSelectModule,
     CarouselModule,
     MatInputModule,
     HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
     SimpleModalModule.forRoot({ container: document.body }),
     TranslateModule.forRoot({
       defaultLanguage: 'en',

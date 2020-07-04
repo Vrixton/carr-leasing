@@ -4,14 +4,17 @@
   color: $black !important;
   background-color: $transparent !important;
   transition: 0.2s;
+
   mat-toolbar-row {
     justify-content: space-evenly;
+
     span {
       font-size: 15px !important;
       font-weight: 100 !important;
       cursor: pointer;
       transition: 0.1s;
     }
+
     span.brand {
       font-weight: bold !important;
       font-size: 20px !important;
@@ -20,26 +23,38 @@
       font-family: "Ethnocentric", "Gilroy";
     }
   }
+
   mat-toolbar-row.movil {
     display: none;
+
+    .change-language {
+      position: absolute;
+      right: 20px;
+    }
   }
 }
+
 .dark {
   background-color: $dark-blue !important;
   color: $white !important;
 }
+
 .menu-movil {
   display: none;
 }
+
 @media (max-width: 750px) {
   .header {
     background-color: $dark-blue !important;
+
     mat-toolbar-row.desktop {
       display: none !important;
     }
+
     mat-toolbar-row.movil {
       display: flex;
       justify-content: flex-start;
+
       button {
         color: $white;
         background-color: $transparent;
@@ -49,6 +64,7 @@
       }
     }
   }
+
   .menu-movil {
     display: block;
     position: fixed;
@@ -58,6 +74,7 @@
     color: $white;
     z-index: 10;
     transition: 0.5s;
+
     ul {
       width: 100%;
       line-height: 4;
@@ -65,6 +82,7 @@
       margin-top: 30px;
       text-align: center;
       padding: 0;
+
       li.brand {
         font-weight: bold !important;
         font-size: 20px !important;
@@ -73,6 +91,7 @@
         font-family: "Ethnocentric", "Gilroy";
       }
     }
+
     button {
       color: $white;
       background-color: $transparent;
@@ -80,22 +99,27 @@
       cursor: pointer;
       margin-left: 10px;
       margin-top: 10px;
+
       i {
         font-size: 30px;
       }
     }
   }
+
   .menu-closed {
     margin-top: -200% !important;
   }
 }
-@media screen and (min-device-width: 1350px), screen and (min-width: 1350px) {
+
+@media screen and (min-device-width: 1350px),
+screen and (min-width: 1350px) {
   .header {
     mat-toolbar-row {
       span {
         font-size: 20px !important;
         font-weight: 100 !important;
       }
+
       span.brand {
         font-size: 25px !important;
       }
