@@ -28,6 +28,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { CustomizeFormComponent } from './customize-form/customize-form.component';
+import { TermsComponent } from './terms/terms.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, '/assets/i18n/', '.json');
@@ -47,6 +48,7 @@ export function createTranslateLoader(http: HttpClient) {
     FooterComponent,
     ContactUsComponent,
     CustomizeFormComponent,
+    TermsComponent,
   ],
   imports: [
     BrowserModule,
