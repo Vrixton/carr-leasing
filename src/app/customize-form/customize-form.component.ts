@@ -70,18 +70,31 @@ export class CustomizeFormComponent
     });
   }
   sendQuote(data) {
-    this.sendEmail
-      .post(
+    const emailData = {
+      emailFrom: data.value.ContactInformation.email
+        ? data.value.ContactInformation.email
+        : 'undefined@undefined.com',
+      nameFrom:
         data.value.ContactInformation.firstName +
-          ' ' +
-          data.value.ContactInformation.firstName,
-        data.value.ContactInformation.email,
-        'CUSTOMIZE CAR',
-        'Aqui va el contenido...',
-        'CUSTOMIZE_CAR'
-      )
-      .subscribe((response) => {
-        console.log(response);
-      });
+        ' ' +
+        data.value.ContactInformation.lastName
+          ? data.value.ContactInformation.firstName +
+            ' ' +
+            data.value.ContactInformation.lastName
+          : ' ',
+      subject: 'Vehicle customization',
+      content: data.value,
+      tag: 'VehicleCustomization',
+    };
+    this.sendEmail.post(emailData).subscribe((response) => {
+      document.getElementById('formCustomize').classList.add('hidden');
+      if (response[0].id) {
+        document.getElementById('successMessage').classList.add('show');
+        document.getElementById('successMessage').classList.remove('hidden');
+      } else {
+        document.getElementById('errorMessage').classList.add('show');
+        document.getElementById('errorMessage').classList.remove('hidden');
+      }
+    });
   }
 }

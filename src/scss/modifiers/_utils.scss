@@ -66,3 +66,20 @@ div.yellow-line {
 .justify {
   text-align: justify;
 }
+
+.success-text {
+  color: $green;
+}
+.error-text {
+  color: $red;
+}
+
+.center {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.show {
+  display: block;
+}

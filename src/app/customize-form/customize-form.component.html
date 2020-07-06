@@ -1,7 +1,8 @@
 <div class="modal-content">
     <div class="modal-body">
         <button type="button" class="btn-close" (click)="close()">x</button>
-        <form [formGroup]="customizeData" (ngSubmit)="sendQuote(customizeData)" class="form-customize">
+        <form [formGroup]="customizeData" (ngSubmit)="sendQuote(customizeData)" class="form-customize"
+            id="formCustomize">
             <h2 class="extra-bold">{{ 'CUSTOMIZE_VEHICLE' | translate }}</h2>
             <h3>{{ 'CONTACT_INFORMATION' | translate }}</h3>
             <table class="customize-table" formGroupName="ContactInformation">
@@ -241,5 +242,11 @@
             <h3 class="slogan">{{ 'SLOGAN_CUSTOMIZE_FORM' | translate }}</h3>
             <button type="submit" class="btn-customize-submit">{{ 'SUBMIT' | translate }}</button>
         </form>
+        <div id="successMessage" class="hidden">
+            <h1 class="success-text center">{{ 'SUCCESS_MESSAGE_1' | translate }}</h1>
+        </div>
+        <div id="error-form-send" class="hidden">
+            <h1 id="error-text center">{{ 'ERROR_MESSAGE_1' | translate }}</h1>
+        </div>
     </div>
 </div>
