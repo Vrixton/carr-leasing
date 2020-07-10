@@ -240,17 +240,8 @@
                 </tr>
             </table>
             <div class="secondQuoteClick" (click)="activeSecondQ = !activeSecondQ">
-                <h3>Make a second quote</h3>
-                <span>></span>
+                <h3>{{ 'MAKE_A_SECOND_QUOTE' | translate }}</h3>
             </div>
-
-
-
-
-
-
-
-
 
             <div *ngIf="activeSecondQ" class="container-second-quote">
                 <h3>{{ 'VEHICLE_INFORMATION' | translate }}</h3>
