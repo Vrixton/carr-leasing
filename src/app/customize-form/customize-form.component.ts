@@ -30,6 +30,7 @@ export class CustomizeFormComponent
   transmissions: any = Constants.TRANSMISSIONS;
   driveSystems: any = Constants.DRIVE_SYSTEMS;
   durations: any = Constants.DURATIONS;
+  activeSecondQ: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -74,6 +75,31 @@ export class CustomizeFormComponent
         excessWearTear: [null],
         dentDingProtection: [null],
       }),
+      SecondVehicleInformation: this.fb.group({
+        brand2: [null],
+        model2: [null],
+        year2: [null],
+        mileage2: [null],
+        status2: [null],
+        exteriorColor2: [null],
+        interiorColor2: [null],
+        audioQuality2: [null],
+        specialFeatures2: [null],
+        brakes2: [null],
+        transmission2: [null],
+        driveSystem2: [null],
+      }),
+      SecondFinancingTerms: this.fb.group({
+        duration2: [null],
+        annualMileage2: [null],
+        downPayment2: [null],
+        monthlyBudget2: [null],
+        prepaidMaintenance2: [null],
+        tireWheelProtection2: [null],
+        appearanceProtection2: [null],
+        excessWearTear2: [null],
+        dentDingProtection2: [null],
+      }),
     });
   }
   sendQuote(data) {
@@ -92,6 +118,7 @@ export class CustomizeFormComponent
       subject: 'Vehicle customization',
       content: data.value,
       tag: 'VehicleCustomization',
+      secondQuote: this.activeSecondQ,
     };
     this.sendEmail.post(emailData).subscribe((response) => {
       document.getElementById('formCustomize').classList.add('hidden');
