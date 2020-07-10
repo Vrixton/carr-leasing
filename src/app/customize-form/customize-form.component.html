@@ -240,13 +240,8 @@
                 </tr>
             </table>
             <h3 class="slogan">{{ 'SLOGAN_CUSTOMIZE_FORM' | translate }}</h3>
-            <button type="submit" class="btn-customize-submit">{{ 'SUBMIT' | translate }}</button>
+            <button type="submit" class="btn-customize-submit"
+                [disabled]="customizeData.invalid">{{ 'SUBMIT' | translate }}</button>
         </form>
-        <div id="successMessage" class="hidden">
-            <h1 class="success-text center">{{ 'SUCCESS_MESSAGE_1' | translate }}</h1>
-        </div>
-        <div id="error-form-send" class="hidden">
-            <h1 id="error-text center">{{ 'ERROR_MESSAGE_1' | translate }}</h1>
-        </div>
     </div>
 </div>

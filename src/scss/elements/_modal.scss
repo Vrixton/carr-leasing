@@ -41,9 +41,10 @@
     margin: 20px auto;
     cursor: pointer;
   }
-button.btn-customize-submit:disabled {
-  background-color: $grey;
-  color: $dark-grey;
-  border-color: $dark-grey;
-}
+  button.btn-customize-submit:disabled {
+    background-color: $grey;
+    color: $dark-grey;
+    border-color: $dark-grey;
+    cursor: no-drop;
+  }
 }

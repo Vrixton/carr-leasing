@@ -4,6 +4,8 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Validators, EmailValidator } from '@angular/forms';
 import { Constants } from './../../config/constants';
 import { SendEmailService } from '../services/send-email/send-email.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { TranslateService } from '@ngx-translate/core';
 export interface ConfirmModel {
   title: string;
   message: string;
@@ -29,7 +31,12 @@ export class CustomizeFormComponent
   driveSystems: any = Constants.DRIVE_SYSTEMS;
   durations: any = Constants.DURATIONS;
 
-  constructor(private fb: FormBuilder, private sendEmail: SendEmailService) {
+  constructor(
+    private fb: FormBuilder,
+    private sendEmail: SendEmailService,
+    private _snackBar: MatSnackBar,
+    private translate: TranslateService
+  ) {
     super();
   }
   ngOnInit(): void {
@@ -43,29 +50,29 @@ export class CustomizeFormComponent
         city: [null, Validators.required],
       }),
       VehicleInformation: this.fb.group({
-        brand: [null, Validators.required],
-        model: [null, Validators.required],
-        year: [null, Validators.required],
-        mileage: [null, Validators.required],
-        status: [null, Validators.required],
-        exteriorColor: [null, Validators.required],
-        interiorColor: [null, Validators.required],
-        audioQuality: [null, Validators.required],
-        specialFeatures: [null, Validators.required],
-        brakes: [null, Validators.required],
-        transmission: [null, Validators.required],
-        driveSystem: [null, Validators.required],
+        brand: [null],
+        model: [null],
+        year: [null],
+        mileage: [null],
+        status: [null],
+        exteriorColor: [null],
+        interiorColor: [null],
+        audioQuality: [null],
+        specialFeatures: [null],
+        brakes: [null],
+        transmission: [null],
+        driveSystem: [null],
       }),
       FinancingTerms: this.fb.group({
-        duration: [null, Validators.required],
-        annualMileage: [null, Validators.required],
-        downPayment: [null, Validators.required],
-        monthlyBudget: [null, Validators.required],
-        prepaidMaintenance: [null, Validators.required],
-        tireWheelProtection: [null, Validators.required],
-        appearanceProtection: [null, Validators.required],
-        excessWearTear: [null, Validators.required],
-        dentDingProtection: [null, Validators.required],
+        duration: [null],
+        annualMileage: [null],
+        downPayment: [null],
+        monthlyBudget: [null],
+        prepaidMaintenance: [null],
+        tireWheelProtection: [null],
+        appearanceProtection: [null],
+        excessWearTear: [null],
+        dentDingProtection: [null],
       }),
     });
   }
@@ -88,13 +95,17 @@ export class CustomizeFormComponent
     };
     this.sendEmail.post(emailData).subscribe((response) => {
       document.getElementById('formCustomize').classList.add('hidden');
-      if (response[0].id) {
-        document.getElementById('successMessage').classList.add('show');
-        document.getElementById('successMessage').classList.remove('hidden');
-      } else {
-        document.getElementById('errorMessage').classList.add('show');
-        document.getElementById('errorMessage').classList.remove('hidden');
-      }
+      this.showSuccessMessage();
+    });
+  }
+  showSuccessMessage() {
+    this.translate.get('SUCCESS_MESSAGE_1').subscribe((res: string) => {
+      this._snackBar.open(res, '', {
+        duration: 2000,
+        horizontalPosition: 'center',
+        verticalPosition: 'top',
+      });
+      this.close();
     });
   }
 }

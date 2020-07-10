@@ -58,6 +58,11 @@
       background-color: $transparent-black;
     }
   }
+  button.btn-contact-us:disabled {
+    color: $dark-grey;
+    border-color: $dark-grey;
+    cursor: no-drop;
+  }
 }
 
 @media screen and (min-device-width: 1350px), screen and (min-width: 1350px) {

@@ -5,19 +5,19 @@
         <div>{{ 'US' | translate }}</div>
     </div>
     <div>
-        <form method="get" enctype="text/plain">
+        <form [formGroup]="contactUsData" (ngSubmit)="sendContactUs(contactUsData)" method="get" enctype="text/plain">
             <table cellspacing="0">
                 <tr>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'FIRST_NAME' | translate }}</mat-label>
-                            <input placeholder="John Michael" matInput>
+                            <input formControlName="firstName" placeholder="John Michael" matInput>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'LAST_NAME' | translate }}</mat-label>
-                            <input placeholder="Doe McCartney" matInput>
+                            <input formControlName="lastName" placeholder="Doe McCartney" matInput>
                         </mat-form-field>
                     </td>
                 </tr>
@@ -25,22 +25,23 @@
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'EMAIL' | translate }}</mat-label>
-                            <input placeholder="Doemichael@example.com" matInput>
+                            <input formControlName="email" type="email" placeholder="Doemichael@example.com" matInput>
                         </mat-form-field>
                     </td>
                     <td>
                         <mat-form-field>
                             <mat-label>{{ 'PHONE' | translate }}</mat-label>
-                            <input placeholder="300-000-000" matInput>
+                            <input formControlName="phone" placeholder="300-000-000" matInput>
                         </mat-form-field>
                     </td>
                 </tr>
 
             </table>
             <div class="container-textarea">
-                <textarea placeholder="{{ 'MESSAGE' | translate }}" id="message"></textarea>
+                <textarea formControlName="message" placeholder="{{ 'MESSAGE' | translate }}" id="message"></textarea>
             </div>
-            <button type="submit" class="btn-contact-us">{{ 'SUBMIT' | translate }}</button>
+            <button [disabled]="contactUsData.invalid" type="submit"
+                class="btn-contact-us">{{ 'SUBMIT' | translate }}</button>
         </form>
     </div>
 </div>

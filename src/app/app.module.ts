@@ -12,6 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 // APP COMPONENTS
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -58,6 +59,7 @@ export function createTranslateLoader(http: HttpClient) {
     MatRadioModule,
     MatCheckboxModule,
     MatSelectModule,
+    MatSnackBarModule,
     CarouselModule,
     MatInputModule,
     HttpClientModule,
