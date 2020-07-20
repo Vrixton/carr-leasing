@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SimpleModalService } from 'ngx-simple-modal';
+import { CustomizeFormComponent } from '../customize-form/customize-form.component';
 import { Constants } from './../../config/constants';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 
@@ -29,7 +31,16 @@ export class ModelComponent implements OnInit {
     },
     nav: false,
   };
-  constructor() {}
+  constructor(private simpleModalService: SimpleModalService) {}
 
   ngOnInit(): void {}
+  showConfirm() {
+    let disposable = this.simpleModalService
+      .addModal(CustomizeFormComponent)
+      .subscribe((isConfirmed) => {
+        if (isConfirmed) {
+          alert('accepted');
+        }
+      });
+  }
 }
