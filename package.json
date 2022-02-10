@@ -38,7 +38,7 @@
     "http-server": "^0.12.3",
     "ngx-owl-carousel-o": "^3.0.1",
     "ngx-simple-modal": "^1.4.13",
-    "node-sass": "^4.14.1",
+    "node-sass": "^7.0.0",
     "path": "^0.12.7",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
