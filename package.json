@@ -19,7 +19,7 @@
   "dependencies": {
     "@angular/animations": "~9.1.11",
     "@angular/cdk": "^9.2.4",
-    "@angular/cli": "~9.1.9",
+    "@angular/cli": "~16.1.4",
     "@angular/common": "~9.1.11",
     "@angular/compiler": "~9.1.11",
     "@angular/compiler-cli": "~9.1.11",
@@ -38,7 +38,7 @@
     "http-server": "^0.12.3",
     "ngx-owl-carousel-o": "^3.0.1",
     "ngx-simple-modal": "^1.4.13",
-    "node-sass": "^4.14.1",
+    "node-sass": "^9.0.0",
     "path": "^0.12.7",
     "rxjs": "~6.5.4",
     "tslib": "^2.0.0",
@@ -46,8 +46,8 @@
     "zone.js": "~0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.901.9",
-    "@angular/cli": "~9.1.9",
+    "@angular-devkit/build-angular": "~16.1.4",
+    "@angular/cli": "~16.1.4",
     "@angular/compiler-cli": "~9.1.11",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
